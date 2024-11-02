@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.precobom.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label>Versão 1.0.0</Label>
+    <Button prefWidth="200" onMouseClicked="#onCaixaButtonClicked">Caixa</Button>
+    <Button prefWidth="200" onMouseClicked="#onVerificadorButtonClicked">Verificador de Preço</Button>
+    <Button prefWidth="200" onMouseClicked="#onSobreButtonClicked">Sobre o Sistema</Button>
+    <Button prefWidth="200" onMouseClicked="#onSairButtonClicked">Sair</Button>
+</VBox>
