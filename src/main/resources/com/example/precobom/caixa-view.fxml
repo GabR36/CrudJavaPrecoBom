@@ -26,7 +26,7 @@
     <Button onMouseClicked="#onAdicionarMouseClicked">Adicionar à lista</Button>
     <Label>Lista de Produtos:</Label>
     <ListView fx:id="listViewProdutos"/>
-    <Button>Excluir</Button>
+    <Button onMouseClicked="#onExcluirMouseClicked">Excluir</Button>
 
     <HBox alignment="CENTER">
         <VBox>
@@ -35,7 +35,7 @@
         </VBox>
         <VBox>
             <Label>Valor Pago:</Label>
-            <TextField fx:id="labelValorPg"/>
+            <TextField onKeyTyped="#onTrocoKeyTyped" fx:id="textValorPg"/>
         </VBox>
         <VBox>
             <Label>Troco:</Label>

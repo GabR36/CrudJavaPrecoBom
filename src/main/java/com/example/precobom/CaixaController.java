@@ -16,7 +16,13 @@ public class CaixaController {
     private TextField textQuantidade;
 
     @FXML
+    private TextField textValorPg;
+
+    @FXML
     private Label labelInfoProdutos;
+
+    @FXML
+    private Label labelTroco;
 
     @FXML
     private ListView listViewProdutos;
@@ -48,6 +54,18 @@ public class CaixaController {
         totalTotal += Float.parseFloat(total);
         items.add(desc + " - Qtd: " + quant + " - Unit: R$ " + preco + " - Total: R$ " + total);
         listViewProdutos.setItems(items);
-        labelTotal.setText(Float.toString(totalTotal));
+        labelTotal.setText("R$ " + Float.toString(totalTotal));
+    }
+
+    @FXML
+    protected void onExcluirMouseClicked(){
+
+    }
+
+    @FXML
+    protected void onTrocoKeyTyped(){
+        float valorPg = Float.parseFloat(textValorPg.getText());
+        String troco = Float.toString(valorPg - totalTotal);
+        labelTroco.setText("R$ " + troco);
     }
 }
