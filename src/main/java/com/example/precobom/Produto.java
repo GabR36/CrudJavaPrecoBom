@@ -3,7 +3,13 @@ package com.example.precobom;
 public class Produto {
     private String codigo;
     private String desc;
-    private float preco;
+    private Float preco;
+
+    public Produto(String codigo, String desc, Float preco){
+        this.desc = desc;
+        this.codigo = codigo;
+        this.preco = preco;
+    }
 
     public String getDesc(){
         return desc;
@@ -21,7 +27,7 @@ public class Produto {
         this.codigo = codigo;
     }
 
-    public float getPreco(){
+    public Float getPreco(){
         return preco;
     }
 

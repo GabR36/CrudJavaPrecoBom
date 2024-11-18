@@ -15,13 +15,14 @@
     <HBox alignment="CENTER">
         <VBox>
             <Label>Código:</Label>
-            <TextField fx:id="textCodigo" onKeyPressed="#onCodigoTextKeyPressed" />
+            <TextField fx:id="textCodigo" onKeyTyped="#onCodigoTextKeyTyped" />
         </VBox>
         <VBox>
             <Label>Quantidade:</Label>
             <TextField fx:id="textQuantidade" />
         </VBox>
     </HBox>
+    <Label fx:id="labelInfoProdutos"/>
     <Button>Adicionar à lista</Button>
     <Label>Lista de Produtos:</Label>
     <TextArea />
@@ -30,15 +31,15 @@
     <HBox alignment="CENTER">
         <VBox>
             <Label>Total:</Label>
-            <Label>Valor</Label>
+            <Label />
         </VBox>
         <VBox>
             <Label>Valor Pago:</Label>
-            <TextField />
+            <TextField fx:id="labelValorPg"/>
         </VBox>
         <VBox>
             <Label>Troco:</Label>
-            <Label>Valor</Label>
+            <Label fx:id="labelTroco"/>
         </VBox>
     </HBox>
 </VBox>

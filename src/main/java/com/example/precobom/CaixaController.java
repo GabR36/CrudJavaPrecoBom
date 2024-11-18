@@ -1,6 +1,7 @@
 package com.example.precobom;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class CaixaController {
@@ -8,7 +9,12 @@ public class CaixaController {
     private TextField textCodigo;
 
     @FXML
-    protected void onCodigoTextKeyPressed(){
+    private Label labelInfoProdutos;
 
+    @FXML
+    protected void onCodigoTextKeyTyped(){
+        ListaProdutos listaprod = ListaProdutos.getInstace();
+        String desc = listaprod.obterDescPorCodigo(textCodigo.getText());
+        labelInfoProdutos.setText(desc);
     }
 }
