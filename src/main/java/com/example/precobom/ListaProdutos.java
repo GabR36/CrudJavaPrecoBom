@@ -28,6 +28,16 @@ public class ListaProdutos {
         return descricao;
     }
 
+    public String obterPrecoPorCodigo(String codigo){
+        String preco = "";
+        for (Produto x:list){
+            if (x.getCodigo().equals(codigo)){
+                preco = Float.toString(x.getPreco());
+            }
+        }
+        return preco;
+    }
+
     public void setList(ArrayList<Produto> list) {
         this.list = list;
     }

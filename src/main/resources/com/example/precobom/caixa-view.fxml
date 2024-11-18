@@ -23,15 +23,15 @@
         </VBox>
     </HBox>
     <Label fx:id="labelInfoProdutos"/>
-    <Button>Adicionar à lista</Button>
+    <Button onMouseClicked="#onAdicionarMouseClicked">Adicionar à lista</Button>
     <Label>Lista de Produtos:</Label>
-    <TextArea />
+    <ListView fx:id="listViewProdutos"/>
     <Button>Excluir</Button>
 
     <HBox alignment="CENTER">
         <VBox>
             <Label>Total:</Label>
-            <Label />
+            <Label fx:id="labelTotal"/>
         </VBox>
         <VBox>
             <Label>Valor Pago:</Label>
