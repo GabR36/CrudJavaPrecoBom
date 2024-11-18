@@ -59,7 +59,10 @@ public class CaixaController {
 
     @FXML
     protected void onExcluirMouseClicked(){
+        int indiceItemSelecionado = listViewProdutos.getSelectionModel().getSelectedIndex();
+        listViewProdutos.getItems();
 
+        listViewProdutos.getItems().remove(indiceItemSelecionado);
     }
 
     @FXML

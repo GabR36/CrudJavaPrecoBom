@@ -13,10 +13,10 @@
             prefHeight="400.0" prefWidth="600.0">
     <Label>Verificador de Preço</Label>
     <Label>Código do Produto:</Label>
-    <TextField fx:id="textCodigo" />
+    <TextField onKeyTyped="#onCodigoKeyTyped" fx:id="textCodigo" />
     <Label>Descrição:</Label>
-    <Label fx:id="textDescricao" />
+    <Label fx:id="labelDescricao" />
     <Label>Valor:</Label>
-    <TextField fx:id="textValor" />
+    <Label fx:id="labelValor" />
 
 </VBox>
