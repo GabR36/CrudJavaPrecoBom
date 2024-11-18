@@ -5,15 +5,46 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.precobom.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label>Versão 1.0.0</Label>
-    <Button prefWidth="200" onMouseClicked="#onCaixaButtonClicked">Caixa</Button>
-    <Button prefWidth="200" onMouseClicked="#onVerificadorButtonClicked">Verificador de Preço</Button>
-    <Button prefWidth="200" onMouseClicked="#onSobreButtonClicked">Sobre o Sistema</Button>
-    <Button prefWidth="200" onMouseClicked="#onSairButtonClicked">Sair</Button>
-</VBox>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.precobom.HelloController">
+    <top>
+        <MenuBar>
+            <Menu text="Funcionalidades">
+                <MenuItem text="Caixa" onAction="#onCaixaButtonClicked"/>
+                <MenuItem text="Verificar Preços" onAction="#onVerificadorButtonClicked"/>
+                <MenuItem text="Sair" onAction="#onSairButtonClicked"/>
+            </Menu>
+            <Menu text="Sobre">
+                <MenuItem text="Sobre" onAction="#onSobreButtonClicked"/>
+            </Menu>
+            <Menu text="Ajuda"/>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+
+
+            <Label fx:id="welcomeText"/>
+            <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../Images/eating.gif"/>
+                </image>
+            </ImageView>
+            <Label>Versão 1.0.0</Label>
+            <Button prefWidth="200" onMouseClicked="#onCaixaButtonClicked">Caixa</Button>
+            <Button prefWidth="200" onMouseClicked="#onVerificadorButtonClicked">Verificador de Preço</Button>
+            <Button prefWidth="200" onMouseClicked="#onSobreButtonClicked">Sobre o Sistema</Button>
+            <Button prefWidth="200" onMouseClicked="#onSairButtonClicked">Sair</Button>
+        </VBox>
+    </center>
+</BorderPane>
